@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  position: relative;
+  height: 100dvh;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  width: 100px;
+}
+
+#content {
+  height: 200px;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  border-color: purple;
+  outline: blue;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=styles.css.map */
