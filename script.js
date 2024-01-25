@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let randomX = Math.random() * 500;
         let randomY = Math.random() * 500;
         console.log(randomX, randomY);
-        
+        noBtn.style.transition = '0.2s all';
         noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`
     })
     
