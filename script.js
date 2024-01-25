@@ -3,14 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     funnyBgm.loop = true;
     funnyBgm.volume = 0.6;
     
+    const buttons = document.querySelectorAll('button')
     const yesBtn = document.querySelector('#yes-btn')
     const noBtn = document.querySelector('#no-btn')
     const heading = document.querySelector('#heading')
+    const letMeThinkDiv = document.querySelector('#let-me-think-div')
     
+    letMeThinkDiv.addEventListener('click', () => {
+        letMeThinkDiv.style.display = 'none';
+        buttons.forEach(button => button.style.display = 'inline-block')
+    })
     
-    
-    console.log(window.innerHeight);
-    console.log(window.innerWidth);
     noBtn.addEventListener('mouseover', () => {
         funnyBgm.play()
         let randomX = Math.random() * 500;

@@ -8,7 +8,19 @@ h1 {
   text-align: center;
 }
 
+#let-me-think-div {
+  font-size: 48px;
+  padding: 10px;
+  background-color: hotpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
 button {
+  display: none;
   width: 100px;
 }
 
