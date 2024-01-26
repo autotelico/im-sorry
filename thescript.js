@@ -16,14 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     noBtn.addEventListener('mouseover', function () {
         funnyBgm.play();
-        var randomX = Math.random() * 500;
-        var randomY = Math.random() * 500;
+        randomizeNoBtnLocation();
+    });
+    yesBtn.addEventListener("click", function () {
+        heading.textContent = 'Também te amo <3';
+        heading.style.color = 'hotpink';
+    });
+    function randomizeNoBtnLocation() {
+        var randomX = Math.floor(Math.random() * 500) + 1;
+        var randomY = Math.floor(Math.random() * 500) + 1;
         console.log(randomX, randomY);
         noBtn.style.transform = "translate(".concat(randomX, "px, ").concat(randomY, "px)");
         noBtn.style.transition = '0.2s transform';
-    });
-    yesBtn.addEventListener("click", function () {
-        heading.textContent = 'I love you too <3';
-        heading.style.color = 'hotpink';
-    });
+    }
 });

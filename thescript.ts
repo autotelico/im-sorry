@@ -23,15 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   noBtn.addEventListener('mouseover', () => {
     funnyBgm.play();
-    let randomX: number = Math.random() * 500;
-    let randomY: number = Math.random() * 500;
-    console.log(randomX, randomY);
-    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    noBtn.style.transition = '0.2s transform'
+    randomizeNoBtnLocation();
   });
 
   yesBtn.addEventListener("click", () => {
-    heading.textContent = 'I love you too <3';
+    heading.textContent = 'Também te amo <3';
     heading.style.color = 'hotpink';
   })
+
+  function randomizeNoBtnLocation() {
+    let randomX: number = Math.floor(Math.random() * 500) + 1;
+    let randomY: number = Math.floor(Math.random() * 500) + 1;
+    console.log(randomX, randomY);
+    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    noBtn.style.transition = '0.2s transform'
+  }
 });
